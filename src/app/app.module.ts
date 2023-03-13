@@ -2,6 +2,7 @@ import { TuiRootModule, TuiDialogModule } from "@taiga-ui/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { EventPluginsModule } from '@tinkoff/ng-event-plugins';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,8 +16,9 @@ import { FileUploaderComponent } from './file-uploader/file-uploader.component';
   imports: [
     // Base imports
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    EventPluginsModule,
+    AppRoutingModule,
     // Taiga UI core modules
     TuiRootModule,
     TuiDialogModule,
