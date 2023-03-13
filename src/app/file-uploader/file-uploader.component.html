@@ -1,0 +1,15 @@
+<ng-container *tuiLet="isLoading$ | async as isLoading">
+  <tui-input-files
+    accept="image/*"
+    [multiple]="true"
+    [disabled]="isLoading || false"
+    [ngModel]="[]"
+    (ngModelChange)="uploadFiles($event)"
+  ></tui-input-files>
+
+  <tui-loader [showLoader]="isLoading || false" class="tui-space_top-6">
+    <tui-files>
+      <tui-file *ngFor="let file of files$ | async" [file]="file"></tui-file>
+    </tui-files>
+  </tui-loader>
+</ng-container>

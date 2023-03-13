@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'component-store';
+  filesUploaded(componentId: number, files: File[]) {
+    console.log(`Event from uploader #${componentId}, ${files.length} active files`);
+  }
 }
